@@ -7,8 +7,10 @@ import java.util.Arrays;
 import java.util.Random;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
+@Ignore
 public class TestOTExtMany {
 	static final int n = 1000;
 	GCSignal[][] m;

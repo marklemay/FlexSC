@@ -5,8 +5,10 @@ import gc.GCSignal;
 import java.security.SecureRandom;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
+@Ignore
 public class TestNPOT {
 	GCSignal[] m;
 	boolean c;

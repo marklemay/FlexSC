@@ -12,7 +12,7 @@ import util.Utils;
 public abstract class CompEnv<T> {
 	public long numOfAnds = 0;
 	public static SecureRandom rnd;
-	static{
+	static {
 		Security.addProvider(new ISAACProvider());
 		try {
 			rnd = SecureRandom.getInstance("ISAACRandom");
@@ -23,12 +23,12 @@ public abstract class CompEnv<T> {
 	}
 
 	@SuppressWarnings("rawtypes")
-	public static CompEnv getEnv(Mode mode, Party p, Network w) {
+	public static CompEnv getEnv(Mode mode, Party p, Network w) throws Exception {
 		if (mode == Mode.REAL)
 			if (p == Party.Bob)
 				return new gc.regular.GCEva(w);
 			else
-				return new gc.regular.GCGen(w);		
+				return new gc.regular.GCGen(w);
 		else if (mode == Mode.OPT)
 			if (p == Party.Bob)
 				return new gc.halfANDs.GCEva(w);
@@ -46,13 +46,8 @@ public abstract class CompEnv<T> {
 		} else if (mode == Mode.CIRCUIT) {
 			return new ClearCircuitCompEnv(w, p);
 		} else {
-			try {
-				throw new Exception("not a supported Mode!");
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			return null;
+			throw new Exception("not a supported Mode!");
+
 		}
 	}
 
@@ -77,7 +72,7 @@ public abstract class CompEnv<T> {
 	public abstract T[] inputOfAlice(boolean[] in);
 
 	public abstract T[] inputOfBob(boolean[] in);
-	
+
 	public T[][] inputOfAlice(boolean[][] in) {
 		boolean[] flattened = Utils.flatten(in);
 		T[] res = inputOfAlice(flattened);
@@ -85,7 +80,7 @@ public abstract class CompEnv<T> {
 		Utils.unflatten(res, unflattened);
 		return unflattened;
 	}
-	
+
 	public T[][] inputOfBob(boolean[][] in) {
 		boolean[] flattened = Utils.flatten(in);
 		T[] res = inputOfBob(flattened);
@@ -101,7 +96,7 @@ public abstract class CompEnv<T> {
 		Utils.unflatten(res, unflattened);
 		return unflattened;
 	}
-	
+
 	public T[][][] inputOfBob(boolean[][][] in) {
 		boolean[] flattened = Utils.flatten(in);
 		T[] res = inputOfBob(flattened);
@@ -110,7 +105,6 @@ public abstract class CompEnv<T> {
 		return unflattened;
 	}
 
-	
 	public abstract boolean[] outputToAlice(T[] out);
 
 	public abstract boolean[] outputToBob(T[] out);
