@@ -7,12 +7,13 @@ import harness.Test_2Input1Output.Helper;
 
 import java.util.Random;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import util.Utils;
 import circuits.arithmetic.IntegerLib;
 
-
+@Ignore
 public class TestIntegerLib extends TestHarness {
 
 	Random rnd = new Random();

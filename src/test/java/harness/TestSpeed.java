@@ -3,6 +3,7 @@ package harness;
 
 import java.math.BigInteger;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import util.Utils;
@@ -12,6 +13,7 @@ import flexsc.Flag;
 import flexsc.Mode;
 import flexsc.Party;
 
+@Ignore
 public class TestSpeed extends TestHarness {
 
 	public <T>T[] secureCompute(T[] a, T[] b, CompEnv<T> env) {

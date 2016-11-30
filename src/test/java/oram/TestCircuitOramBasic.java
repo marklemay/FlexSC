@@ -3,6 +3,7 @@ package oram;
 import java.security.SecureRandom;
 import java.util.Arrays;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import util.Utils;
@@ -221,6 +222,7 @@ public class TestCircuitOramBasic {
 	GenRunnable gen = new GenRunnable(1234);
 	EvaRunnable eva = new EvaRunnable("localhost", 1234);
 
+	@Ignore
 	@Test
 	public void runThreads() throws Exception {
 		Thread tGen = new Thread(gen);

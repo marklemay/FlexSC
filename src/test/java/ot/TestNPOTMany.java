@@ -6,8 +6,10 @@ import java.security.SecureRandom;
 import java.util.Arrays;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
+@Ignore
 public class TestNPOTMany {
 	static int n = 50000;
 	GCSignal[][] m;

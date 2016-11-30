@@ -8,12 +8,13 @@ import harness.Test_2Input1Output;
 import java.math.BigInteger;
 import java.util.Random;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import circuits.CircuitLib;
 import circuits.arithmetic.IntegerLib;
 
-
+@Ignore
 public class TestCircuitLib extends TestHarness {
 	Random rnd = new Random();
 	

@@ -1,5 +1,6 @@
 package oram;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import util.Utils;
@@ -9,6 +10,7 @@ import flexsc.Mode;
 import flexsc.PMCompEnv;
 import flexsc.Party;
 
+@Ignore
 public class CountCircuitOramRec {
 
 	public  static void main(String args[]) throws Exception {

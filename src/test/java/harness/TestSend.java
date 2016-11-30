@@ -1,5 +1,6 @@
 package harness;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 
@@ -59,6 +60,8 @@ public class TestSend {
 			}
 		}
 	}
+	
+	@Ignore
 	@Test
 	public <T>void runThreads() throws Exception {
 		GenRunnable gen = new GenRunnable();
