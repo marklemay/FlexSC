@@ -41,7 +41,7 @@ public class IntegerLib<T> extends CircuitLib<T> implements ArithmeticLib<T> {
 		return res;
 	}
 
-	// full n-bit adder
+	/** full n-bit adder */
 	public T[] addFull(T[] x, T[] y, boolean cin) {
 		assert (x != null && y != null && x.length == y.length) : "add: bad inputs.";
 		

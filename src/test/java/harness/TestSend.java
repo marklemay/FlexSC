@@ -46,7 +46,7 @@ public class TestSend {
 				connect(s, 54321);				
 			
 				
-				byte[] data = new byte[1024*1024];
+//				byte[] data = new byte[1024*1024];
 				double t1 = System.nanoTime();
 				for(int i = 1; i < 100000; ++i) {
 					readBytes(1024*1024);

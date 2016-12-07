@@ -1,5 +1,13 @@
-FlexSC
+FlexSC (maven compatible, with other scratch work)
 ======
+
+mvn install should work
+
+TODO: passing tests
+TODO: remove all the TODO Auto-generated catch block
+TODO: get Config.conf from resources
+
+
 
 A Flexible Efficient Secure Computation Backend.
 

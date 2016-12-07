@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Scanner;
 
+//TODO: should be dealing in configs, not config parsers
 public class ConfigParser {
 	HashMap<String, String> config;
 	public ConfigParser (String filename) {
